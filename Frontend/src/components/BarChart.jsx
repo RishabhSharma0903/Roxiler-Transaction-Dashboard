@@ -27,7 +27,7 @@ const BarChart = ({ month }) => {
   const fetchBarData = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/bar-chart?month=${month}`
+        `https://roxiler-transaction-dashboard-backend.onrender.com/bar-chart?month=${month}`
       );
       setBarData(response.data);
     } catch (error) {
