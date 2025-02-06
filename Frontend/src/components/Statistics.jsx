@@ -15,7 +15,7 @@ const Statistics = ({ month }) => {
   const fetchStatistics = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/statistics?month=${month}`
+        `https://roxiler-transaction-dashboard-backend.onrender.com/statistics?month=${month}`
       );
       setStatistics(response.data);
     } catch (error) {
