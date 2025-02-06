@@ -17,7 +17,7 @@ const TransactionsTable = ({ month }) => {
   const fetchTransactions = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/transactions?month=${month}&search=${search}&page=${page}&perPage=${perPage}`
+        `https://roxiler-transaction-dashboard-backend.onrender.com/transactions?month=${month}&search=${search}&page=${page}&perPage=${perPage}`
       );
       setTransactions(response.data.transactions); // Assuming backend returns { transactions, totalPages }
       setTotalPages(response.data.totalPages); // Set total pages from backend
